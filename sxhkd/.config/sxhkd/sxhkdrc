@@ -25,11 +25,14 @@ alt + s
 alt + c
 	clipmenu
 
+alt + Escape
+	pkill -USR1 -x sxhkd
+
 XF86AudioRaiseVolume
-	pactl set-sink-volume $(pacmd list-sinks | awk '/name:/ \{print $2\}' | tr -d "<>" | tail --lines 1) +2%
+	amixer sset Master 2%+
 
 XF86AudioLowerVolume
-	pactl set-sink-volume $(pacmd list-sinks | awk '/name:/ \{print $2\}' | tr -d "<>" | tail --lines 1) -2%
+	amixer sset Master 2%-
 
 XF86MonBrightnessUp
 	xbacklight -inc 5
