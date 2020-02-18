@@ -1,5 +1,4 @@
 alias sp="sudo pacman"
-alias dmitry="ssh dmitry@192.168.1.56"
 
 alias vim="nvim"
 alias vrc="$EDITOR ~/.vimrc"
@@ -15,7 +14,7 @@ HISTFILE=~/.config/zsh/histfile
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
-PROMPT="[t450]$ "
+PROMPT="[%m %2~]%# "
 
 # Functions
 function cdf() {
