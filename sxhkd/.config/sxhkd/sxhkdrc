@@ -1,0 +1,38 @@
+alt + Return
+	$TERMINAL
+
+alt + w
+	$TERMINAL -e tmux a -t weechat
+
+alt + shift + m
+	$TERMINAL -e "mutt"
+
+alt + n
+	$TERMINAL -e "mocp"
+
+alt + shift + f
+	$TERMINAL -e "vfzf"
+
+alt + p
+	dmenu_run
+
+alt + b
+	brave
+
+alt + s
+	spotify
+
+alt + c
+	clipmenu
+
+XF86AudioRaiseVolume
+	pactl set-sink-volume $(pacmd list-sinks | awk '/name:/ \{print $2\}' | tr -d "<>" | tail --lines 1) +2%
+
+XF86AudioLowerVolume
+	pactl set-sink-volume $(pacmd list-sinks | awk '/name:/ \{print $2\}' | tr -d "<>" | tail --lines 1) -2%
+
+XF86MonBrightnessUp
+	xbacklight -inc 5
+
+XF86MonBrightnessDown
+	xbacklight -dec 5
