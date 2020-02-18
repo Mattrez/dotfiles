@@ -1,0 +1,9 @@
+{
+	"languageserver": {
+		"rust": {
+			"command": "rls",
+			"filetypes": ["rust"],
+			"rootPatterns": ["Cargo.toml"]
+		}
+	}
+}
