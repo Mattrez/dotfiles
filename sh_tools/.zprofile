@@ -1,7 +1,7 @@
 eval $(ssh-agent)
 
 export EDITOR="/usr/bin/nvim"
-export TERMINAL="/usr/local/bin/st"
+export TERMINAL="/usr/bin/alacritty"
 export BROWSER="/usr/bin/brave"
 
 PATH="$HOME/.scripts":$PATH
