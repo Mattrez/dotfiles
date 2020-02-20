@@ -4,7 +4,6 @@
 setxkbmap pl
 
 # deamon's
-sxhkd $
 clipmenud &
 
 # wallpaper

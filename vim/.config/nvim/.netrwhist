@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/etc/systemd/system/sysinit.target.wants'
+let g:netrw_dirhist_5='/etc/systemd/system/getty.target.wants'
 let g:netrw_dirhist_4='/home/matt/code/rust/mkgif/src'
 let g:netrw_dirhist_3='/home/matt/code/rust/mkgif/src/bin'
 let g:netrw_dirhist_2='/home/matt/code/rust/mkgif/src'
