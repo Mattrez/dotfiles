@@ -25,6 +25,9 @@ alt + s
 alt + c
 	clipmenu
 
+alt + shift + p
+	poweroff
+
 alt + Escape
 	pkill -USR1 -x sxhkd
 
