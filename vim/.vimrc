@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'VundleVim/Vundle.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'vim-scripts/wombat256.vim'
+Plug 'altercation/vim-colors-solarized'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
 Plug '/usr/local/opt/fzf'
@@ -9,7 +10,10 @@ Plug 'junegunn/fzf.vim'
 call plug#end()
 
 syntax enable
-colorscheme wombat256mod
+set background=light
+
+let g:solarized_termcolors=256
+colorscheme solarized
 
 set nocompatible
 filetype off
