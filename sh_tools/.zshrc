@@ -4,6 +4,7 @@ alias aghssh="ssh matrado9@149.156.111.10"
 
 alias vim="nvim"
 alias vrc="$EDITOR ~/.vimrc"
+alias gs="git status"
 
 autoload -U colors && colors
 
