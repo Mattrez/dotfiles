@@ -6,8 +6,16 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
 Plug '/usr/local/opt/fzf'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'vim-airline/vim-airline'
 Plug 'junegunn/fzf.vim'
 call plug#end()
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 syntax enable
 set background=light

@@ -7,3 +7,4 @@ export BROWSER="/usr/bin/brave"
 PATH="$HOME/.scripts":$PATH
 
 export GOPATH="$HOME/code/go"
+export PATH="$HOME/.cargo/bin:$PATH"
