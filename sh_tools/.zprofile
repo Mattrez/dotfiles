@@ -8,3 +8,4 @@ PATH="$HOME/.scripts":$PATH
 
 export GOPATH="$HOME/code/go"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/var/lib/snapd/snap/bin:$PATH"

@@ -52,6 +52,9 @@ nnoremap , <nop>
 
 nnoremap <leader>c :RustRun<CR>
 
+nmap ]r <Plug>(coc-references)
+nmap ]d <Plug>(coc-definition)
+
 imap jk <Esc>
 inoremap {<Enter> {<Enter>}<Esc>O
 
