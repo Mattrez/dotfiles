@@ -14,7 +14,6 @@ HISTSIZE=5000
 SAVEHIST=5000
 HISTFILE=~/.config/zsh/histfile
 
-bindkey -v
 bindkey '^R' history-incremental-search-backward
 
 PROMPT="[%m %2~]%# "
