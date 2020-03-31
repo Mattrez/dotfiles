@@ -1,6 +1,6 @@
 alias sp="sudo pacman"
 
-alias aghssh="ssh matrado9@149.156.111.10"
+alias sendzimir="matrado9@149.156.111.10"
 
 alias vim="nvim"
 alias vrc="$EDITOR ~/.vimrc"
