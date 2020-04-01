@@ -1,10 +1,6 @@
-alias sp="sudo pacman"
-
-alias sendzimir="matrado9@149.156.111.10"
-
-alias vim="nvim"
-alias vrc="$EDITOR ~/.vimrc"
 alias gs="git status"
+
+sendzimir="matrado9@149.156.111.10"
 
 autoload -U colors && colors
 
