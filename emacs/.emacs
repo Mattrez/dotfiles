@@ -9,11 +9,6 @@
 
 (ido-mode 1)
 
-; Indentention style
-(setq-default c-basic-offset 4)
-(setq c-default-style "linux")
-(setq-default indent-tabs-mode nil)
-
 ; Fonts
 (set-default-font "Liberation Mono 11")
 
@@ -46,10 +41,19 @@
     ("d91ef4e714f05fff2070da7ca452980999f5361209e679ee988e3c432df24347" default)))
  '(package-selected-packages
    (quote
-    (magit org yasnippet yasnippet-snippets rust-mode smex solarized-theme))))
+    (ggtags magit org yasnippet yasnippet-snippets rust-mode smex solarized-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+                                        ; All of the C/C++ stuff
+(require 'ggtags)
+(defun cpp-hook ()
+  (setq c-basic-offset 4)
+  (c-set-offset 'substatment-open 0)
+  (setq-default indent-tabs-mode nil)
+  (ggtags-mode 1))
+(add-hook 'c++-mode-hook 'cpp-hook)
