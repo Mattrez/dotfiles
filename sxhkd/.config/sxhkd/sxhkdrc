@@ -1,17 +1,20 @@
 alt + Return
 	$TERMINAL
 
-alt + w
-	$TERMINAL -e tmux a -t weechat
+alt + shift + c
+	$TERMINAL -e "python"
 
 alt + shift + m
-	$TERMINAL -e "mutt"
-
-alt + n
-	$TERMINAL -e "mocp"
+	$TERMINAL -e "neomutt"
 
 alt + shift + f
-	$TERMINAL -e "vfzf"
+	$TERMINAL -e "nnn"
+
+alt + c
+	$TERMINAL -e "calcurse"
+
+alt + y
+	redshift
 
 alt + p
 	dmenu_run
@@ -22,8 +25,14 @@ alt + b
 alt + s
 	spotify
 
-alt + c
-	clipmenu
+alt + n
+	mypaint
+
+alt + w
+	mapradr
+
+alt + shift + s
+	pavucontrol
 
 alt + shift + p
 	poweroff
@@ -31,11 +40,14 @@ alt + shift + p
 alt + Escape
 	pkill -USR1 -x sxhkd
 
+Print
+	screenshot
+
 XF86AudioRaiseVolume
-	amixer sset Master 2%+
+	pactl set-sink-volume 0 +2%
 
 XF86AudioLowerVolume
-	amixer sset Master 2%-
+	pactl set-sink-volume 0 -2%
 
 XF86MonBrightnessUp
 	xbacklight -inc 5

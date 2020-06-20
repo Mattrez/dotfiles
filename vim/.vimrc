@@ -1,27 +1,20 @@
 call plug#begin('~/.vim/plugged')
-Plug 'VundleVim/Vundle.vim'
-Plug 'machakann/vim-highlightedyank'
-Plug 'vim-scripts/wombat256.vim'
-Plug 'altercation/vim-colors-solarized'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'rust-lang/rust.vim'
-Plug '/usr/local/opt/fzf'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'vim-airline/vim-airline'
+Plug 'arcticicestudio/nord-vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'machakann/vim-highlightedyank'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-syntax enable
-set background=light
-
-let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme nord
 
 set nocompatible
 filetype off
@@ -46,22 +39,14 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 set smartindent
+set smarttab
 
 let mapleader = ","
 nnoremap , <nop>
 
-nnoremap <leader>c :RustRun<CR>
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gr <Plug>(coc-references)
+nmap <leader>f :Files<CR>
+nmap <leader>b :Buffers<CR>
 
-nmap ]r <Plug>(coc-references)
-nmap ]d <Plug>(coc-definition)
-
-imap jk <Esc>
-inoremap {<Enter> {<Enter>}<Esc>O
-
-autocmd FileType latex,tex nnoremap <F9> :w \| !comp_tex.sh %<CR>
-autocmd FileType latex,tex set spell
-autocmd FileType latex,tex set spelllang=en,pl
-autocmd Filetype nroff set spell
-autocmd Filetype nroff set spelllang=en,pl
-autocmd Filetype nroff set wrap
-autocmd FileType nroff nnoremap <F9> :w \| make
+map <leader>c :w! \| !compiler <c-r>%<CR>
